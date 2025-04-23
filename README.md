@@ -64,3 +64,49 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+ 1. Persiapan Lingkungan
+Pastikan kamu sudah install:
+
+- PHP 8.2
+- Composer (versi terbaru)
+- PostgreSQL 9.2
+- Node.js & npm (untuk frontend jika ingin memakai Vite)
+- Laravel installer (opsional)
+
+Jika kamu pakai Laravel installer:
+- composer global require laravel/installer
+
+2. Buat Project Laravel 11
+create project company profile
+- composer create-project laravel/laravel:^11.0 company-profile
+
+Masuk ke folder project:
+- cd company-profile
+
+3. Konfigurasi Database PostgreSQL
+
+
+Edit file .env untuk setting db:
+
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=nama_database_kamu
+DB_USERNAME=postgres
+DB_PASSWORD=kata_sandi_postgres
+
+
+4. Buat Database
+ Lalu buat database di lokal pgadmin:
+CREATE DATABASE nama_database_kamu;
+
+ 5. Migrasi Database
+ php artisan migrate
+
+6. Jalankan Project
+
+php artisan serve
